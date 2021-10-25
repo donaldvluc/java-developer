@@ -1,5 +1,19 @@
 package academy.learnprogramming;
 
+/**
+ * Key Takeaways:
+ * 1) Ranges,
+ *  - byte range {-128, 127}
+ *   - short range {-32768, 32767}
+ *   - int range {-2147483648, 2147483647}
+ *   - long range {-9223372036854775808, 9223372036854775807}
+ *
+ * 2) Numbers can be spaced out with _'s. e.g. 52455 -> 52_455
+ *
+ * 3) Numbers are intrinsically integers so casts for byte / shorts are usually required
+ *    while casts for long are usually not required.
+ */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -44,10 +58,10 @@ public class Main {
         System.out.println("---------------------------------------------------");
 
         // Program Challenge:
-        byte myByte = 126;  // -128 to 127
-        short myShort = 32766;  // -32768 to 32767
-        int myInt = 2147483646;  // -2147483648 to 2147483647
-        long answer = (long) 50_000 + (10 * (myByte + myShort + myInt));
+        byte myByte = 126;
+        short myShort = 32766;
+        int myInt = 2147483646;
+        long answer = 50_000L + 10L * (myByte + myShort + myInt);
         System.out.println("Program Challenge: " + answer);
     }
 }
